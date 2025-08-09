@@ -1,4 +1,4 @@
-🚀 𝟏𝟎 𝐁𝐚𝐬𝐡 𝐎𝐧𝐞-𝐋𝐢𝐧𝐞𝐫𝐬 𝐭𝐨 𝐌𝐚𝐤𝐞 𝐃𝐞𝐯𝐎𝐩𝐬 𝐋𝐢𝐟𝐞 𝐄𝐚𝐬𝐢𝐞𝐫 🚀
+        🚀 𝟏𝟎 𝐁𝐚𝐬𝐡 𝐎𝐧𝐞-𝐋𝐢𝐧𝐞𝐫𝐬 𝐭𝐨 𝐌𝐚𝐤𝐞 𝐃𝐞𝐯𝐎𝐩𝐬 𝐋𝐢𝐟𝐞 𝐄𝐚𝐬𝐢𝐞𝐫 🚀
 
 1️⃣ Find out which process is using most Memory 💾
 
@@ -8,7 +8,8 @@
 
 •	📊 --sort=-%mem : sorts by memory usage (highest first).
 
-•	🔝 head -n 10: show top 10 processes.
+•	🔝 head -n 10: show top 10 processes. 
+
 
 
 2️⃣ Monitor CPU Usage in Real-Time 🖥️
@@ -20,6 +21,7 @@
 •	🎯 grep "Cpu(s)" : extracts CPU usage details.
 
 
+
 3️⃣ Check Disk Space Usage 💽
 
 𝗱𝗳 -𝗵 | 𝗮𝘄𝗸 '$𝟱+𝟬 > 𝟴𝟬 {𝗽𝗿𝗶𝗻𝘁}'
@@ -29,6 +31,7 @@
 •	🚨 awk '$5+0 > 80 {print}' : extracts rows where usage exceeds 80%.
 
 •	⚙️ Modify the threshold (80) based on your needs.
+
 
 
 4️⃣ Find Large Files Eating Up Space 🗂️
@@ -44,6 +47,7 @@
 •	🔝 head -10 : limits output to the top 10 largest files.
 
 
+
 5️⃣ Monitor log files in real-time, filtering for error messages 📜⚠️
 
 𝘁𝗮𝗶𝗹 -𝗳 /𝘃𝗮𝗿/𝗹𝗼𝗴/𝘀𝘆𝘀𝗹𝗼𝗴 | 𝗴𝗿𝗲𝗽 --𝗹𝗶𝗻𝗲-𝗯𝘂𝗳𝗳𝗲𝗿𝗲𝗱 "𝗲𝗿𝗿𝗼𝗿"
@@ -53,11 +57,13 @@
 •	🎯 grep --line-buffered "error" : filters lines containing “error”.
 
 
+
 6️⃣ List all Running Services ⚙️
 
 𝘀𝘆𝘀𝘁𝗲𝗺𝗰𝘁𝗹 𝗹𝗶𝘀𝘁-𝘂𝗻𝗶𝘁𝘀 --𝘁𝘆𝗽𝗲=𝘀𝗲𝗿𝘃𝗶𝗰𝗲 --𝘀𝘁𝗮𝘁𝗲=𝗿𝘂𝗻𝗻𝗶𝗻𝗴
 
 •	🛠️ Shows all currently running services.
+
 
 
 7️⃣ Find and Delete Old Log Files 🗑️
@@ -67,6 +73,8 @@
 •	⏳ -mtime +7 : selects files older than 7 days.
 
 •	🗑️ -exec rm -f {} + : deletes them.
+
+
 
 8️⃣ Download a File in the Background ⬇️
 
@@ -79,6 +87,7 @@
 •	🏃 & : runs the process in the background.
 
 
+
 9️⃣ Test If a Port is Open on a Remote Server 🌐
 
 𝗻𝗰 -𝘇𝘃 𝗲𝘅𝗮𝗺𝗽𝗹𝗲.𝗰𝗼𝗺 𝟰𝟰𝟯
@@ -86,6 +95,7 @@
 •	🔍 -z : scan mode (don’t send data).
 
 •	📢 -v : verbose (show output).
+
 
 
 🔟 List All Running Docker Containers 🐳
