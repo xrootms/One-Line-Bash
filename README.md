@@ -8,7 +8,9 @@
 
 
 1️⃣ Find out which process is using most Memory 💾
+
 𝗽𝘀 𝗮𝘂𝘅 --𝘀𝗼𝗿𝘁=-%𝗺𝗲𝗺 | 𝗵𝗲𝗮𝗱 -𝗻 𝟭𝟬
+
 •	📋 ps aux : List all processes with memory & CPU usage.
 •	📊 --sort=-%mem : sorts by memory usage (highest first).
 •	🔝 head -n 10: show top 10 processes.
