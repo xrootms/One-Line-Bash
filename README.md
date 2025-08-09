@@ -5,3 +5,60 @@
 🔧 Perfect for sysadmins, DevOps engineers, and automation lovers alike.
 
 🛠️ Turn repetitive chores into instant actions with a single line.
+
+
+1️⃣ Find out which process is using most Memory 💾
+𝗽𝘀 𝗮𝘂𝘅 --𝘀𝗼𝗿𝘁=-%𝗺𝗲𝗺 | 𝗵𝗲𝗮𝗱 -𝗻 𝟭𝟬
+•	📋 ps aux : List all processes with memory & CPU usage.
+•	📊 --sort=-%mem : sorts by memory usage (highest first).
+•	🔝 head -n 10: show top 10 processes.
+
+2️⃣ Monitor CPU Usage in Real-Time 🖥️
+𝘁𝗼𝗽 -𝗯 -𝗻 𝟭 | 𝗴𝗿𝗲𝗽 "𝗖𝗽𝘂(𝘀)"
+•	📝 top -b -n 1 : runs ‘top’ once, prints the output as plain text.
+•	🎯 grep "Cpu(s)" : extracts CPU usage details.
+
+3️⃣ Check Disk Space Usage 💽
+𝗱𝗳 -𝗵 | 𝗮𝘄𝗸 '$𝟱+𝟬 > 𝟴𝟬 {𝗽𝗿𝗶𝗻𝘁}'
+•	📦 df -h : displays disk usage in a readable format.
+•	🚨 awk '$5+0 > 80 {print}' : extracts rows where usage exceeds 80%.
+•	⚙️ Modify the threshold (80) based on your needs.
+
+4️⃣ Find Large Files Eating Up Space 🗂️
+𝗳𝗶𝗻𝗱 / -𝘁𝘆𝗽𝗲 𝗳 -𝗲𝘅𝗲𝗰 𝗱𝘂 -𝗵 {} + | 𝘀𝗼𝗿𝘁 -𝗿𝗵 | 𝗵𝗲𝗮𝗱 -𝟭𝟬
+•	🔍 find / -type f : searches for all files.
+•	📏 du -h : calculates file sizes in human-readable format.
+•	📉 sort -rh : Sorts results in descending order.
+•	🔝 head -10 : limits output to the top 10 largest files.
+
+5️⃣ Monitor log files in real-time, filtering for error messages 📜⚠️
+𝘁𝗮𝗶𝗹 -𝗳 /𝘃𝗮𝗿/𝗹𝗼𝗴/𝘀𝘆𝘀𝗹𝗼𝗴 | 𝗴𝗿𝗲𝗽 --𝗹𝗶𝗻𝗲-𝗯𝘂𝗳𝗳𝗲𝗿𝗲𝗱 "𝗲𝗿𝗿𝗼𝗿"
+•	📡 tail -f : follows the log file as new entries are added.
+•	🎯 grep --line-buffered "error" : filters lines containing “error”.
+
+6️⃣ List all Running Services ⚙️
+𝘀𝘆𝘀𝘁𝗲𝗺𝗰𝘁𝗹 𝗹𝗶𝘀𝘁-𝘂𝗻𝗶𝘁𝘀 --𝘁𝘆𝗽𝗲=𝘀𝗲𝗿𝘃𝗶𝗰𝗲 --𝘀𝘁𝗮𝘁𝗲=𝗿𝘂𝗻𝗻𝗶𝗻𝗴
+•	🛠️ Shows all currently running services.
+
+7️⃣ Find and Delete Old Log Files 🗑️
+𝗳𝗶𝗻𝗱 /𝘃𝗮𝗿/𝗹𝗼𝗴 -𝗻𝗮𝗺𝗲 "*.𝗹𝗼𝗴" -𝗺𝘁𝗶𝗺𝗲 +𝟳 -𝗲𝘅𝗲𝗰 𝗿𝗺 -𝗳 {} +
+•	⏳ -mtime +7 : selects files older than 7 days.
+•	🗑️ -exec rm -f {} + : deletes them.
+
+8️⃣ Download a File in the Background ⬇️
+𝗻𝗼𝗵𝘂𝗽 𝘄𝗴𝗲𝘁 -𝗾 𝗵𝘁𝘁𝗽𝘀://𝗲𝘅𝗮𝗺𝗽𝗹𝗲.𝗰𝗼𝗺/𝗯𝗶𝗴𝗳𝗶𝗹𝗲.𝘇𝗶𝗽 &
+•	🔄 nohup : ensures the process runs even after logging out.
+•	📥 wget -q : downloads the file quietly.
+•	🏃 & : runs the process in the background.
+
+9️⃣ Test If a Port is Open on a Remote Server 🌐
+𝗻𝗰 -𝘇𝘃 𝗲𝘅𝗮𝗺𝗽𝗹𝗲.𝗰𝗼𝗺 𝟰𝟰𝟯
+•	🔍 -z : scan mode (don’t send data).
+•	📢 -v : verbose (show output).
+
+🔟 List All Running Docker Containers 🐳
+𝗱𝗼𝗰𝗸𝗲𝗿 𝗽𝘀 --𝗳𝗼𝗿𝗺𝗮𝘁 "{{.𝗜𝗗}} {{.𝗜𝗺𝗮𝗴𝗲}} {{.𝗦𝘁𝗮𝘁𝘂𝘀}}"
+•	📋 docker ps : lists running containers.
+•	🖊️ --format : structures the output for better readability.
+
+
