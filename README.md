@@ -11,7 +11,7 @@ ps aux --sort=-%mem | head -n 10
 
 ---
 
-## 2️⃣ Monitor CPU Usage in Real-Time 🖥
+## 2️⃣ Monitor CPU Usage in Real-Time 
 
 ```bash
 top -b -n 1 | grep "Cpu(s)"
@@ -21,7 +21,7 @@ top -b -n 1 | grep "Cpu(s)"
 
 ---
 
-## 3️⃣ Check Disk Space Usage 💽
+## 3️⃣ Check Disk Space Usage
 
 ```bash
 df -h | awk '$5+0 > 80 {print}'
@@ -32,7 +32,7 @@ df -h | awk '$5+0 > 80 {print}'
 
 ---
 
-## 4️⃣ Find Large Files Eating Up Space 🗂️
+## 4️⃣ Find Large Files Eating Up Space 
 
 ```bash
 find / -type f -exec du -h {} + | sort -rh | head -10
@@ -54,7 +54,7 @@ tail -f /var/log/syslog | grep --line-buffered "error"
 
 ---
 
-## 6️⃣ List all Running Services ⚙️
+## 6️⃣ List all Running Services 
 
 ```bash
 systemctl list-units --type=service --state=running
