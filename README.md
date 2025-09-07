@@ -50,7 +50,7 @@ find / -type f -exec du -h {} + | sort -rh | head -10
 tail -f /var/log/syslog | grep --line-buffered "error"
 ```
 **tail -f** : follows the log file as new entries are added.  
-🎯 **grep --line-buffered "error"** : filters lines containing “error”.
+**grep --line-buffered "error"** : filters lines containing “error”.
 
 ---
 
@@ -100,4 +100,4 @@ nc -zv example.com 443
 docker ps --format "{{.ID}} {{.Image}} {{.Status}}"
 ```
 **docker ps** : lists running containers.  
-🖊**--format** : structures the output for better readability.
+**--format** : structures the output for better readability.
