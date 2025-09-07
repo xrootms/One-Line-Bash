@@ -1,6 +1,6 @@
-# 🚀 10 Bash One-Liners to Make DevOps Life Easier 🚀
+#  10 Bash One-Liners to Make DevOps Life Easier 
 
-## 1️⃣ Find out which process is using most Memory 💾
+## 1️⃣ Find out which process is using most Memory 
 
 ```bash
 ps aux --sort=-%mem | head -n 10
@@ -11,7 +11,7 @@ ps aux --sort=-%mem | head -n 10
 
 ---
 
-## 2️⃣ Monitor CPU Usage in Real-Time 🖥️
+## 2️⃣ Monitor CPU Usage in Real-Time 🖥
 
 ```bash
 top -b -n 1 | grep "Cpu(s)"
@@ -44,7 +44,7 @@ find / -type f -exec du -h {} + | sort -rh | head -10
 
 ---
 
-## 5️⃣ Monitor log files in real-time, filtering for error messages 📜⚠️
+## 5️⃣ Monitor log files in real-time, filtering for error messages 
 
 ```bash
 tail -f /var/log/syslog | grep --line-buffered "error"
@@ -63,7 +63,7 @@ systemctl list-units --type=service --state=running
 
 ---
 
-## 7️⃣ Find and Delete Old Log Files 🗑️
+## 7️⃣ Find and Delete Old Log Files 
 
 ```bash
 find /var/log -name "*.log" -mtime +7 -exec rm -f {} +
@@ -73,7 +73,7 @@ find /var/log -name "*.log" -mtime +7 -exec rm -f {} +
 
 ---
 
-## 8️⃣ Download a File in the Background ⬇️
+## 8️⃣ Download a File in the Background 
 
 ```bash
 nohup wget -q https://example.com/bigfile.zip &
@@ -84,7 +84,7 @@ nohup wget -q https://example.com/bigfile.zip &
 
 ---
 
-## 9️⃣ Test If a Port is Open on a Remote Server 🌐
+## 9️⃣ Test If a Port is Open on a Remote Server 
 
 ```bash
 nc -zv example.com 443
@@ -94,7 +94,7 @@ nc -zv example.com 443
 
 ---
 
-## 🔟 List All Running Docker Containers 🐳
+## 🔟 List All Running Docker Containers 
 
 ```bash
 docker ps --format "{{.ID}} {{.Image}} {{.Status}}"
